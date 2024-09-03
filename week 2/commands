@@ -7,3 +7,11 @@ ngrok http --authtoken 2lTZ12eHXODB7WO9zH0DlXCDjUc_2qPpzKiHiQRqGW3Wueubc 8080
 helm install postgress
 
 helm install my-postgresql bitnami/postgresql --version 15.5.27 -f postgres.yaml
+
+# Generate a new private key
+openssl genpkey -algorithm RSA -out nginx-selfsigned.key -aes256
+
+# Generate a new self-signed certificate
+openssl req -new -x509 -sha256 -key nginx-selfsigned.key -out nginx-selfsigned.crt -days 365
+
+kubectl create secret tls nginx-cert-secret --cert=nginx-selfsigned.crt --key=nginx-selfsigned.key
