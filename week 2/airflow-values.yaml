@@ -1,0 +1,46 @@
+# data:
+#   metadataConnection:
+#     user: admin1
+#     pass: admin1
+#     protocol: postgresql
+#     host: ~
+#     port: 5432
+#     db: mydb
+
+webserver:
+  service:
+    type: LoadBalancer
+
+workers:
+  replicas: 2
+  extraContainers:
+    - name: dbt-core
+      image: ghcr.io/dbt-labs/dbt-core:latest
+      command: ["/bin/sh", "-c", "tail -f /dev/null"]
+      volumeMounts:
+        - name: dbt-config
+          mountPath: /etc/dbt
+  extraVolumes:
+    - name: dbt-config
+      configMap:
+        name: dbt-config
+
+webserver:
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "500m"
+    limits:
+      memory: "1Gi"
+      cpu: "1"
+
+
+# webserverSecretKey: 50ef7a20f1272aa61633d8fa998e7ab2
+
+# dags:
+#   gitSync:
+#     knownHosts: |
+#       github.com ssh-rsa AAAA...1/wsjk=
+
+# scheduler:
+#   enabled: false
