@@ -1,9 +1,4 @@
 # Configure the Google Cloud provider
-provider "google" {
-  project = "ninetyone-life-playground"
-  region  = "europe-west12"
-  zone    = "europe-west12-b"
-}
 
 # Create a Google Cloud Storage bucket
 resource "google_storage_bucket" "terraform-state" {
@@ -19,7 +14,6 @@ resource "google_storage_bucket" "terraform-state" {
 resource "google_compute_instance" "default" {
   name         = "91Life-vm"
   machine_type = "e2-medium"
-  preemptible  = true
 
   boot_disk {
     initialize_params {

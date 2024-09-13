@@ -1,8 +1,4 @@
-provider "google" {
-  project = "ninetyone-life-playground"
-  region  = "europe-west12"
-  zone    = "europe-west12-b"
-}
+
 
 resource "google_compute_instance" "default" {
   name         = "life91-vm"
