@@ -1,8 +1,4 @@
-provider "google" {
-  project = "ninetyone-life-playground"
-  region  = "europe-west1"
-  zone    = "europe-west1-b"
-}
+
 
 resource "google_container_cluster" "primary" {
   name               = "ninetyone-life-playground"

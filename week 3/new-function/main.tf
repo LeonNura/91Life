@@ -37,7 +37,3 @@ module "api_gateway" {
   hello_address      = module.hello.hello_address
   api_address        = module.api.api_address
 }
-
-output "api_gateway_url" {
-  value = module.api_gateway.api_gateway_url
-}
