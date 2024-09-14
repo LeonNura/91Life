@@ -60,7 +60,7 @@ resource "google_compute_firewall" "https" {
 # saving the terraform state in google bucket
 terraform {
   backend "gcs" {
-    bucket = "ninetyone-life-playground-terraform-state"
+    bucket = ""
     prefix = "terraform/state"
   }
 }

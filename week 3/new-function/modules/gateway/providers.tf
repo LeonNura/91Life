@@ -1,9 +1,9 @@
 # provider "google" {
-#   project = "ninetyone-life-playground"
+#   project = ""
 #   region  = "europe-west1"
 # }
 
 # provider "google-beta" {
-#   project = "ninetyone-life-playground"
+#   project = ""
 #   region  = "europe-west1"
 # }

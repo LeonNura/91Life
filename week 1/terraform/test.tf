@@ -2,7 +2,7 @@
 
 # Create a Google Cloud Storage bucket
 resource "google_storage_bucket" "terraform-state" {
-  name          = "ninetyone-life-playground-terraform-state"
+  name          = ""
   location      = "EU"
   storage_class = "STANDARD"
   versioning {

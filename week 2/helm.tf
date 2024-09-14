@@ -1,5 +1,5 @@
 data "google_container_cluster" "primary" {
-  name = "ninetyone-life-playground"
+  name = ""
   location = "europe-west1-b"
 }
 

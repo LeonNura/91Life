@@ -1,7 +1,7 @@
 
 
 resource "google_container_cluster" "primary" {
-  name               = "ninetyone-life-playground"
+  name               = "my-cluster"
   location           = "europe-west1-b"
   deletion_protection = false
 
@@ -35,7 +35,7 @@ output "cluster_endpoint" {
 
 terraform {
   backend "gcs" {
-    bucket = "ninetyone-life-playground-terraform-state"
+    bucket = ""
     prefix = "terraform/state"
   }
 }

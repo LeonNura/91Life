@@ -1,5 +1,5 @@
 # terraform.tfvars
-project_id       = "ninetyone-life-playground"
+project_id       = "example-project-id"
 region           = "europe-west1"
 bucket_name      = "serverless-bucket-index"
 object_name_hello      = "hello.zip"

@@ -25,7 +25,7 @@ resource "google_cloudfunctions_function" "example2" {
 }
 
 # provider "google" {
-#   project = "ninetyone-life-playground"
+#   project = "example-project-id"
 #   region  = "europe-west1"
 # }
 
