@@ -1,6 +1,6 @@
 kubectl port-forward svc/neosync-app 8080:80
 
-ngrok http --authtoken 2lTZ12eHXODB7WO9zH0DlXCDjUc_2qPpzKiHiQRqGW3Wueubc 8080
+ngrok http --authtoken  8080
 
 
 -----------------------------
